@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ktphnDataSet" targetNamespace="http://tempuri.org/ktphnDataSet.xsd" xmlns:mstns="http://tempuri.org/ktphnDataSet.xsd" xmlns="http://tempuri.org/ktphnDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ktphnConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ktphnConnectionString (Settings)" PropertyReference="ApplicationSettings.Kütüphane_BitirmeProjeSon.Properties.Settings.GlobalReference.Default.ktphnConnectionString" Provider="System.Data.OleDb" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="emanetTableAdapter" GeneratorDataComponentClassName="emanetTableAdapter" Name="emanet" UserDataComponentName="emanetTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ktphnConnectionString (Settings)" DbObjectName="emanet" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ogr_id, kitap_id, verilis_tarih, alma_tarih, [not], alindi FROM emanet</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ogr_id" DataSetColumn="ogr_id" />
+              <Mapping SourceColumn="kitap_id" DataSetColumn="kitap_id" />
+              <Mapping SourceColumn="verilis_tarih" DataSetColumn="verilis_tarih" />
+              <Mapping SourceColumn="alma_tarih" DataSetColumn="alma_tarih" />
+              <Mapping SourceColumn="not" DataSetColumn="not" />
+              <Mapping SourceColumn="alindi" DataSetColumn="alindi" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ktphnDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="ktphnDataSet" msprop:Generator_UserDSName="ktphnDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="emanet" msprop:Generator_TableClassName="emanetDataTable" msprop:Generator_TableVarName="tableemanet" msprop:Generator_TablePropName="emanet" msprop:Generator_RowDeletingName="emanetRowDeleting" msprop:Generator_RowChangingName="emanetRowChanging" msprop:Generator_RowEvHandlerName="emanetRowChangeEventHandler" msprop:Generator_RowDeletedName="emanetRowDeleted" msprop:Generator_UserTableName="emanet" msprop:Generator_RowChangedName="emanetRowChanged" msprop:Generator_RowEvArgName="emanetRowChangeEvent" msprop:Generator_RowClassName="emanetRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ogr_id" msprop:Generator_ColumnVarNameInTable="columnogr_id" msprop:Generator_ColumnPropNameInRow="ogr_id" msprop:Generator_ColumnPropNameInTable="ogr_idColumn" msprop:Generator_UserColumnName="ogr_id" type="xs:int" minOccurs="0" />
+              <xs:element name="kitap_id" msprop:Generator_ColumnVarNameInTable="columnkitap_id" msprop:Generator_ColumnPropNameInRow="kitap_id" msprop:Generator_ColumnPropNameInTable="kitap_idColumn" msprop:Generator_UserColumnName="kitap_id" type="xs:int" minOccurs="0" />
+              <xs:element name="verilis_tarih" msprop:Generator_ColumnVarNameInTable="columnverilis_tarih" msprop:Generator_ColumnPropNameInRow="verilis_tarih" msprop:Generator_ColumnPropNameInTable="verilis_tarihColumn" msprop:Generator_UserColumnName="verilis_tarih" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="alma_tarih" msprop:Generator_ColumnVarNameInTable="columnalma_tarih" msprop:Generator_ColumnPropNameInRow="alma_tarih" msprop:Generator_ColumnPropNameInTable="alma_tarihColumn" msprop:Generator_UserColumnName="alma_tarih" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="not" msprop:Generator_ColumnVarNameInTable="columnnot" msprop:Generator_ColumnPropNameInRow="not" msprop:Generator_ColumnPropNameInTable="notColumn" msprop:Generator_UserColumnName="not" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="alindi" msprop:Generator_ColumnVarNameInTable="columnalindi" msprop:Generator_ColumnPropNameInRow="alindi" msprop:Generator_ColumnPropNameInTable="alindiColumn" msprop:Generator_UserColumnName="alindi" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
